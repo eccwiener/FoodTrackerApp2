@@ -6,10 +6,10 @@
 //  Copyright © 2016 Elena. All rights reserved.
 //
 
+
 import UIKit
 
 class MealTableViewCell: UITableViewCell {
-    
     // MARK: Properties
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -20,11 +20,13 @@ class MealTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
+    
+
 
 }

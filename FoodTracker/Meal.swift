@@ -4,12 +4,12 @@
 //
 //  Created by Elena Wiener on 8/4/16.
 //  Copyright © 2016 Elena. All rights reserved.
-//
+////
+
 
 import UIKit
 
 class Meal {
-    
     // MARK: Properties
     
     var name: String
@@ -19,7 +19,6 @@ class Meal {
     // MARK: Initialization
     
     init?(name: String, photo: UIImage?, rating: Int) {
-        
         // Initialize stored properties.
         self.name = name
         self.photo = photo
@@ -29,9 +28,7 @@ class Meal {
         if name.isEmpty || rating < 0 {
             return nil
         }
-        
     }
-
+    
 }
-
 

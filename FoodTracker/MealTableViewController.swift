@@ -8,9 +8,11 @@
 
 import UIKit
 
-class MealTableViewController: UITableViewController {
-    // MARK: Properties
     
+    
+class MealTableViewController: UITableViewController {
+    
+    // MARK: Properties
     
     var meals = [Meal]()
     
@@ -142,7 +144,7 @@ class MealTableViewController: UITableViewController {
         // Fetches the appropriate meal for the data source layout.
         let meal = meals[indexPath.row]
         
-        cell.nameLabel?.text = meal.name
+//        cell.nameLabel?.text = meal.name
         cell.photoImageView?.image = meal.photo
         cell.ratingControl?.rating = meal.rating
         
@@ -193,5 +195,12 @@ class MealTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? MealViewController, meal = sourceViewController.meal {
+            // Add a new meal.
+            let newIndexPath = NSIndexPath(forRow: meals.count, inSection: 0)
+            meals.append(meal)
+            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+        }
+    }
 }
