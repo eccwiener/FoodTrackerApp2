@@ -5,9 +5,7 @@
 //  Created by Elena Wiener on 8/3/16.
 //  Copyright © 2016 Elena. All rights reserved.
 //
-
 import UIKit
-
 
 class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // MARK: Properties

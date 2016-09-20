@@ -7,8 +7,8 @@
 //
 
 import UIKit
+import Foundation
 
-    
     
 class MealTableViewController: UITableViewController {
     
